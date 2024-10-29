@@ -64,14 +64,14 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-    { load_avg, "[   %s ]",   NULL                          },
+    /* function format          argument */
+    { run_command, "[  %s ]", "playerctl metadata --format '{{ artist }} - {{ title }}'" },
     { disk_used, " [  %s",     "/"                           },
     { disk_total, "/%s ]",      "/"                           },
     { ram_used, " [  %s",      NULL                          },
     { ram_total, "/%s ]",       NULL                          },
-    { cpu_perc, " [  %s%% ]",  NULL                          },    
+    { cpu_perc, " [  %s%% ]",    NULL                          },  
     { run_command, " [  %s ]", "pamixer --get-volume-human"  },
-	{ uptime, " [  %s ]",      NULL                          },
+    { uptime, " [  %s ]",      NULL                          },
     { datetime, "%s",           " [  %a %d %b ] [  %H:%M:%S ]" },
 };
