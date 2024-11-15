@@ -65,13 +65,8 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
     /* function format          argument */
-    { run_command, "[  %s ]", "playerctl metadata --format '{{ artist }} - {{ title }}'" },
-    { disk_used, " [  %s",     "/"                           },
-    { disk_total, "/%s ]",      "/"                           },
-    { ram_used, " [  %s",      NULL                          },
-    { ram_total, "/%s ]",       NULL                          },
-    { cpu_perc, " [  %s%% ]",    NULL                          },  
+    { cpu_perc, "[  %s%% ]",    NULL                          },  
+    { ram_used, " [  %s%% ]",      NULL                          },
     { run_command, " [  %s ]", "pamixer --get-volume-human"  },
-    { uptime, " [  %s ]",      NULL                          },
     { datetime, "%s",           " [  %a %d %b ] [  %H:%M:%S ]" },
 };
